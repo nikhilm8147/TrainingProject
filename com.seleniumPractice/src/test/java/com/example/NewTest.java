@@ -15,22 +15,22 @@ public class NewTest {
 	
 	Calculator calc=new Calculator();
 	
-	@Test(dataProvider="abcd",priority=-1)
-	  public void add(int exp,int a,int b) {
-	    Assert.assertEquals(exp,calc.add(a, b) );
-	  }
+// 	@Test(dataProvider="abcd",priority=-1)
+// 	  public void add(int exp,int a,int b) {
+// 	    Assert.assertEquals(exp,calc.add(a, b) );
+// 	  }
 	
 	
-	 @DataProvider(name="abcd")
-	  public Object[][] getData(){
-		 Object[][] table_values=new Object[][] { {10,5,5},
-			                                      {20,10,10},
-			                                      {100,30,30},
-			                                      {300,150,150}
-			                                              };
+// 	 @DataProvider(name="abcd")
+// 	  public Object[][] getData(){
+// 		 Object[][] table_values=new Object[][] { {10,5,5},
+// 			                                      {20,10,10},
+// 			                                      {100,30,30},
+// 			                                      {300,150,150}
+// 			                                              };
 			  
-			  return table_values;
-		  }
+// 			  return table_values;
+// 		  }
   
 	@BeforeSuite
 	public void before_suite1() {
@@ -42,10 +42,10 @@ public class NewTest {
 		System.out.println("Before class");
 	}
 	
-  @Test(dependsOnMethods = {"d"})
-  public void a() {
-	  System.out.println("testa");
-  }
+//   @Test(dependsOnMethods = {"d"})
+//   public void a() {
+// 	  System.out.println("testa");
+//   }
   
   @Test(priority=2)
   public void b() {
@@ -72,25 +72,25 @@ public class NewTest {
 	  System.out.println("testab");
   }
   
-  @Test(expectedExceptions=ArithmeticException.class)
-  public void bc() {
-	  int i=10/0;
-  }
+//   @Test(expectedExceptions=ArithmeticException.class)
+//   public void bc() {
+// 	  int i=10/0;
+//   }
   
   @Test
   public void cd() {
 	  Reporter.log("Test message",true);
   }
   
-  @Test(timeOut=5000)
-	public void timout() throws InterruptedException {
-		System.out.println("start");
-		int i=1;
-		while(i>0){
-			i++;
-			Thread.sleep(1000);
-			System.out.println(i);	
-		}
+//   @Test(timeOut=5000)
+// 	public void timout() throws InterruptedException {
+// 		System.out.println("start");
+// 		int i=1;
+// 		while(i>0){
+// 			i++;
+// 			Thread.sleep(1000);
+// 			System.out.println(i);	
+// 		}
 		
 	}
   
